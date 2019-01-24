@@ -1,0 +1,50 @@
+.header {
+    position: relative;
+    display: block;
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($theme-color-blue, .8), rgba($theme-color-light-blue, .8)), url('../img/mac_simple_compressed.jpg');
+    background-size: cover;
+    background-position: center;
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+    
+
+    &__main {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__title{
+        display: block;
+        font-size: 3em;
+        color: $color-white;
+        letter-spacing: .75em;
+        text-transform: uppercase;
+    }
+
+    &__desc{
+        font-size: 1.5em;
+        color: $color-white;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+    }
+
+}
+
+@media (max-width: 500px){
+    .header{
+
+        &__title{
+            font-size: 2em;
+        }
+
+        &__desc{
+            font-size: 1em;
+        }
+    }
+}

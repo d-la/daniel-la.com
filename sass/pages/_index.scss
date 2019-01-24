@@ -1,0 +1,23 @@
+.main{
+
+    &__skills{
+        background-color: $theme-color-grey;
+        padding: 10em 0;
+        margin-top: -20vh;
+
+        &-container{
+            display: block;
+            max-width: 50em;
+            width: 100%;
+            margin: 2em auto;
+        }
+    }
+
+    &__experience{
+        padding: 10em 0 2em;
+        margin-top: -10em;
+        background-image: linear-gradient(to right bottom, rgba($theme-color-light-blue, .6), rgba($theme-color-blue, .3)), url('../img/nyc_skyline_compressed.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}

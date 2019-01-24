@@ -1,0 +1,62 @@
+.nav{
+    position: relative;
+    display: block;
+    margin: 0 5%;
+    height: 100%;
+
+    // -webkit-animation: fadein 2s;
+    // -moz-animation: fadein 2s;
+    // -ms-animation: fadein 2s;
+    // -o-animation: fadein 2s;
+    // animation: fadein 5s;
+
+    &__mobile-menu{
+        display: inline-block;
+    }
+
+    &__logo{
+        position: relative;
+        height: 100%;
+        width: 4.5em;
+        top: 2em;
+        left: 2em;
+        z-index: 2;
+        border-radius: 50%;
+        border: 1px solid $theme-color-blue;
+        background: #FFF;
+
+        &:hover{
+            border-color: $theme-color-blue;
+        }
+    
+        &-text{
+            position: relative;
+            display: inline-block;
+            font-size: 1.75em;
+            transform: translate(50%, 50%);
+            color: $theme-color-blue;
+        }
+    }
+
+    &__list{
+
+    }
+
+    &__link{
+        flex: 1;
+    }
+
+    &__item{
+        list-style-type: none;
+    }
+}
+
+@media (max-width: $small-device-width){
+    .nav{
+
+        &__logo{
+            left: 0;
+            margin: 0 auto;
+        }
+    }
+}
