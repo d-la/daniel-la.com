@@ -18,3 +18,9 @@ body{
     line-height: 1.7;
     padding: 2em;
 }
+
+@media (max-width: 500px){
+    body{
+        padding: 1em;
+    }
+}

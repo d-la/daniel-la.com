@@ -1,11 +1,21 @@
 .card{
     display: block;
     width: 15em;
-    margin: 1em auto;
+    margin: 2em auto;
     background-color: rgba($color-white, .8);
     font-size: 1.2em;
-    padding: 2.5em;
+    padding: 2em;
     text-align: center;
     border-radius: 4px;
     box-shadow: 0 .75em 2em rgba($color-black, .15);
+    transition: transform .3s;
+
+    &__logo-img{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &:hover{
+        transform: translateY(-1em) scale(1.03);
+    }
 }
