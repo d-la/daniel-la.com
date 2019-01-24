@@ -6,6 +6,40 @@
   color: #FFF !important;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3em);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 *,
 *::after,
 *::before {
@@ -48,6 +82,7 @@ body {
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+  transition: all 0.2s;
 }
 .header__main {
   position: absolute;
@@ -62,12 +97,14 @@ body {
   color: #FFF;
   letter-spacing: 0.75em;
   text-transform: uppercase;
+  animation: moveInBottom 1.5s ease-out;
 }
 .header__desc {
   font-size: 1.5em;
   color: #FFF;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+  animation: moveInBottom 1.5s ease-out;
 }
 
 @media (max-width: 500px) {
@@ -121,6 +158,51 @@ body {
     margin: 0 auto;
   }
 }
+.footer {
+  background-image: linear-gradient(to right bottom, rgba(13, 23, 144, 0.6), rgba(4, 10, 86, 0.3));
+  padding: 3em;
+}
+.footer__social {
+  max-width: 50em;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer__social a {
+  text-decoration: none;
+}
+.footer__social a:hover {
+  color: #091075;
+}
+.footer__social a.github {
+  color: #000;
+}
+.footer__social a.linked-in {
+  color: #4875B4;
+}
+.footer__social a.gmail {
+  color: #B23121;
+}
+.footer__social a.resume {
+  color: #777;
+}
+
+@media (max-width: 850px) {
+  .footer {
+    padding: 1em;
+  }
+  .footer__social {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    padding: 1em;
+  }
+  .footer__social i {
+    font-size: 1.5em;
+  }
+}
 i[class^=devicon] {
   font-size: 6em;
 }
@@ -131,11 +213,16 @@ i[class^=devicon] {
   margin: 2em auto;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.2em;
-  padding: 2em;
+  padding: 1.5em;
   text-align: center;
   border-radius: 4px;
   box-shadow: 0 0.75em 2em rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
+}
+.card__title {
+  font-size: 1.15em;
+  text-transform: uppercase;
+  padding-bottom: 15px;
 }
 .card__logo-img {
   max-width: 100%;
@@ -146,10 +233,10 @@ i[class^=devicon] {
 }
 
 .experience__title {
-  font-size: 1em;
+  font-size: 0.95em;
 }
 .experience__dates {
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 
 .work__link {
@@ -169,6 +256,7 @@ i[class^=devicon] {
   font-size: 0.85em;
   margin: 0.75em 0;
   text-align: center;
+  min-height: 7em;
 }
 .work__img {
   max-width: 100%;
@@ -185,9 +273,19 @@ i[class^=devicon] {
   }
   .grid--template-columns-skills {
     grid-template-columns: repeat(3, minmax(12.5em, 1fr));
+    transition: all 0.2s;
+  }
+  .grid--template-columns-skills .grid__item {
+    animation: fadein 1.5s ease-out;
   }
   .grid--template-columns-projects {
     grid-template-columns: repeat(3, minmax(12.5em, 1fr));
+  }
+  .grid--template-columns-projects .grid__item {
+    padding: 1em;
+  }
+  .grid--template-columns-social {
+    grid-template-columns: repeat(4, minmax(10em, 1fr));
   }
   .grid--justify-items-center {
     justify-items: center;
@@ -203,6 +301,41 @@ i[class^=devicon] {
   }
   .grid--gap-3 {
     grid-gap: 3em;
+  }
+  .grid__item-block {
+    display: block;
+  }
+  .grid__item-block a {
+    color: #000;
+  }
+
+  @media (max-width: 1299px) {
+    .grid--template-columns-projects {
+      grid-template-columns: repeat(2, minmax(10em, 1fr));
+    }
+  }
+  @media (max-width: 850px) {
+    .grid--template-columns-social {
+      grid-template-columns: repeat(2, minmax(10em, 1fr));
+    }
+  }
+  @media (max-width: 767px) {
+    .grid--template-columns-skills {
+      grid-template-columns: repeat(2, minmax(12.5em, 1fr));
+    }
+  }
+  @media (max-width: 700px) {
+    .grid--template-columns-projects {
+      grid-template-columns: repeat(1, minmax(12.5em, 1fr));
+    }
+    .grid--template-columns-projects .grid__item {
+      padding: 2em;
+    }
+  }
+  @media (max-width: 480px) {
+    .grid--template-columns-skills {
+      grid-template-columns: repeat(1, minmax(12.5em, 1fr));
+    }
   }
 }
 .main__skills {
