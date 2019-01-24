@@ -9,7 +9,7 @@
     // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
-    
+    transition: all .2s;
 
     &__main {
         position: absolute;
@@ -25,6 +25,7 @@
         color: $color-white;
         letter-spacing: .75em;
         text-transform: uppercase;
+        animation: moveInBottom 1.5s ease-out;
     }
 
     &__desc{
@@ -32,6 +33,7 @@
         color: $color-white;
         letter-spacing: .25em;
         text-transform: uppercase;
+        animation: moveInBottom 1.5s ease-out;
     }
 
 }

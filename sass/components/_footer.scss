@@ -1,0 +1,59 @@
+.footer{
+    // background-color: $color-white;
+    background-image: linear-gradient(to right bottom, rgba($theme-color-blue, .6), rgba($theme-color-dark-blue, .3));
+    padding: 3em;
+
+    &__social{
+        max-width: 50em;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        a{
+            text-decoration: none;
+
+            &:hover{
+                color: $theme-color-light-blue;
+            }
+
+            &.github{
+                color: $color-black;
+            }
+
+            &.linked-in{
+                color: #4875B4;
+            }
+
+            &.gmail{
+                // color: #D44638;
+                color: #B23121;
+            }
+
+            &.resume{
+                color: #777;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .footer{
+        padding: 1em;
+
+        &__social{
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .footer{
+        padding: 1em;
+
+        &__social{
+            i{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
