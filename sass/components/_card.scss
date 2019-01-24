@@ -25,3 +25,9 @@
         transform: translateY(-1em) scale(1.03);
     }
 }
+
+@media (max-width: 330px){
+    .card{
+        width: 13em;
+    }
+}

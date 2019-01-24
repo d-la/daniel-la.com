@@ -232,6 +232,11 @@ i[class^=devicon] {
   transform: translateY(-1em) scale(1.03);
 }
 
+@media (max-width: 330px) {
+  .card {
+    width: 13em;
+  }
+}
 .experience__title {
   font-size: 0.95em;
 }
@@ -316,7 +321,7 @@ i[class^=devicon] {
   }
   @media (max-width: 850px) {
     .grid--template-columns-social {
-      grid-template-columns: repeat(2, minmax(10em, 1fr));
+      grid-template-columns: repeat(2, minmax(9em, 1fr));
     }
   }
   @media (max-width: 767px) {
@@ -335,6 +340,11 @@ i[class^=devicon] {
   @media (max-width: 480px) {
     .grid--template-columns-skills {
       grid-template-columns: repeat(1, minmax(12.5em, 1fr));
+    }
+  }
+  @media (max-width: 360px) {
+    .grid--template-columns-social {
+      grid-template-columns: repeat(1, minmax(10em, 1fr));
     }
   }
 }

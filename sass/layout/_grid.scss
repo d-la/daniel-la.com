@@ -67,7 +67,7 @@
     @media (max-width: 850px){
         .grid{
             &--template-columns-social{
-                grid-template-columns: repeat(2, minmax(10em, 1fr));
+                grid-template-columns: repeat(2, minmax(9em, 1fr));
             }    
         }
     }
@@ -96,6 +96,14 @@
         .grid{
             &--template-columns-skills{
                 grid-template-columns: repeat(1, minmax(12.5em, 1fr));
+            }
+        }
+    }
+
+    @media (max-width: 360px){
+        .grid{
+            &--template-columns-social{
+                grid-template-columns: repeat(1, minmax(10em, 1fr));
             }
         }
     }
